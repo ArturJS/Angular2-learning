@@ -110,10 +110,24 @@ class Article {
             Submit link
         </button>
     </form>
+    
+    <form class="ui large form segment">
+        <h3 class="ui header">Search</h3>
+
+        <div class="field">
+            <label for="title">Title:</label>
+            <input id="title" name="title" #title>
+        </div>
+
+        <button (click)="findArticle(title)"
+                class="ui positive right floated button">
+            Find it!
+        </button>
+    </form>
 
     <div class="ui grid posts">
         <reddit-article
-            *ngFor="let article of sortedArticles()"
+            *ngFor="let article of sortedArticles(title)"
             [article]="article"></reddit-article>
     </div>
     `
@@ -139,8 +153,14 @@ class RedditApp {
         link.value = '';
     }
 
-    sortedArticles(): Article[] {
-        return this.articles.sort((a: Article, b: Article) => b.votes - a.votes);
+    findArticle(title: HTMLInputElement): void {
+        if (title.value === '') return;
+    }
+
+    sortedArticles(title: HTMLInputElement): Article[] {
+        return this.articles
+            .sort((a: Article, b: Article) => b.votes - a.votes)
+            .filter(item => item.title.toLowerCase().indexOf(title.value.toLowerCase()) > -1);
     }
 }
 
