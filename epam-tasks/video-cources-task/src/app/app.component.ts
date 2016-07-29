@@ -1,6 +1,7 @@
 /**
  * Created by Artur_Nizamutdinov on 7/27/2016.
  */
+declare var require: any
 import { Component } from 'angular2/core';
 
 @Component({
