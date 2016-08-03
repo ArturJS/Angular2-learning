@@ -6,3 +6,8 @@ html, body{
 span.active {
   background-color: gray;
 }
+
+.main-container {
+  height: calc(100% - 92px);
+  min-height: 300px;
+}

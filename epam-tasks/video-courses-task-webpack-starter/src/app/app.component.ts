@@ -4,6 +4,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 import { AppState } from './app.service';
+import { AppHeader } from './app-header';
 
 /*
  * App Component
@@ -12,11 +13,13 @@ import { AppState } from './app.service';
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
+  directives: [AppHeader],
   styleUrls: [
     './app.style.css'
   ],
   template: `
     <nav>
+      <app-header></app-header>
       <span>
         <a [routerLink]=" ['./'] ">
           Index
@@ -48,7 +51,7 @@ import { AppState } from './app.service';
       </span>
     </nav>
 
-    <main>
+    <main class="main-container">
       <router-outlet></router-outlet>
     </main>
   `
