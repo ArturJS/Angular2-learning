@@ -4,12 +4,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'courses',
-  templateUrl: './courses.html',
-  styleUrls: ['./courses.css']
+  selector: 'courses-page',
+  templateUrl: './courses-page.html',
+  styleUrls: ['./courses-page.css']
 })
 
-export class Courses {
+export class CoursesPage {
   constructor(){
 
   }

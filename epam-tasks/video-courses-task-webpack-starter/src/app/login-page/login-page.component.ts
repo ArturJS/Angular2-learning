@@ -13,15 +13,15 @@ import {
 
 
 @Component({
-  selector: 'login',
+  selector: 'login-page',
   host: {
     'ngClass': 'wh100'
   },
   directives: [FORM_DIRECTIVES, REACTIVE_FORM_DIRECTIVES],
-  templateUrl: './login.html',
-  styleUrls: ['./login.css']
+  templateUrl: './login-page.html',
+  styleUrls: ['./login-page.css']
 })
-export class Login {
+export class LoginPage {
   private loginForm:FormGroup;
 
   constructor(fb:FormBuilder) {
