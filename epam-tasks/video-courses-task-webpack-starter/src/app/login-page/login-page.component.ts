@@ -14,9 +14,9 @@ import {
 
 @Component({
   selector: 'login-page',
-  host: {
-    'ngClass': 'wh100'//todo check (why not working)
-  },
+  /*host: {
+    '[ngClass]': 'wh100'//todo check (why not working)
+  },*/
   directives: [FORM_DIRECTIVES, REACTIVE_FORM_DIRECTIVES],
   templateUrl: './login-page.html',
   styleUrls: ['./login-page.css']
