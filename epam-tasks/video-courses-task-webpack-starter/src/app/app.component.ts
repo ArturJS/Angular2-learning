@@ -18,7 +18,7 @@ import { AppHeader } from './app-header';
     './app.style.css'
   ],
   template: `
-    <nav>
+    <nav class="main-nav">
       <app-header></app-header>
       <span>
         <a [routerLink]=" ['./'] ">

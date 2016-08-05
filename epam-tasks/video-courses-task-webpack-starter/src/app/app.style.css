@@ -11,3 +11,15 @@ span.active {
   height: calc(100% - 92px);
   min-height: 300px;
 }
+
+.main-nav {
+  background: #663399;
+  transition: 0.2s all ease-in;
+  border-radius: 3px;
+  margin-top: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.main-nav:hover {
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.8);
+}
