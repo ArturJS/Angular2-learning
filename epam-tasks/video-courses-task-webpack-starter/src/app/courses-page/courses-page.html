@@ -2,3 +2,9 @@
 <div class="row">
    <search-course></search-course>
 </div>
+
+<ul>
+  <li *ngFor="let course of courseItems">
+    <course-item [course]="course"></course-item>
+  </li>
+</ul>

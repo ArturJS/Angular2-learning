@@ -1,0 +1,25 @@
+<div class="row thumbnail">
+  <div class="col-sm-9">
+    <div class="row">
+      <div class="col-sm-4">
+        <h3>
+          {{course.title}}
+        </h3>
+      </div>
+      <div class="col-sm-6">
+        {{course.duration}}
+      </div>
+      <div class="col-sm-2">
+        {{course.date | date : 'd/M/yy'}}
+      </div>
+    </div>
+    <div>
+      {{course.description}}
+    </div>
+    <!--todo add authors-->
+  </div>
+  <div class="col-sm-3">
+    <button class="btn btn-success btn-block">Редактировать</button>
+    <button class="btn btn-danger btn-block">Удалить</button>
+  </div>
+</div>
