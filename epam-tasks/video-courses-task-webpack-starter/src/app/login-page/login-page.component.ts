@@ -1,7 +1,7 @@
 /**
  * Created by Артур on 31.07.2016.
  */
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {
   FORM_DIRECTIVES,
   REACTIVE_FORM_DIRECTIVES,
@@ -14,15 +14,12 @@ import {
 
 @Component({
   selector: 'login-page',
-  /*host: {
-    '[ngClass]': 'wh100'//todo check (why not working)
-  },*/
   directives: [FORM_DIRECTIVES, REACTIVE_FORM_DIRECTIVES],
   templateUrl: './login-page.html',
   styleUrls: ['./login-page.css']
 })
 export class LoginPage {
-  private loginForm:FormGroup;
+  private loginForm : FormGroup;
 
   constructor(fb:FormBuilder) {
     this.loginForm = fb.group({

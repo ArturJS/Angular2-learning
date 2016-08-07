@@ -3,15 +3,3 @@
   list-style: none;
   padding: 0 15px;
 }
-
-.add-course {
-  float: right;
-  margin-right: 15px;
-}
-
-@media (max-width: 767px) {
-  .add-course{
-    display: block;
-    width: 100%;
-  }
-}

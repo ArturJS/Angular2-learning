@@ -1,15 +1,18 @@
 <h1>Courses page</h1>
 <div class="row">
-  <search-course></search-course>
-  <button class="btn btn-success add-course">
-    <i class="glyphicon glyphicon-plus-sign"></i>
-    Добавить курс
-  </button>
-
+  <search-course (updatedSearchText)="filterCourseItems($event)">
+  </search-course>
+  <div class="col-sm-3 col-sm-offset-1">
+    <button class="btn btn-success btn-block"
+            [routerLink]=" ['./new'] ">
+      <i class="glyphicon glyphicon-plus-sign"></i>
+      Добавить курс
+    </button>
+  </div>
 </div>
 
 <ul class="courses-list">
-  <li *ngFor="let course of courseItems">
+  <li *ngFor="let course of courseItems | filter : ['title'] : searchText">
     <course-item [course]="course"></course-item>
   </li>
 </ul>
