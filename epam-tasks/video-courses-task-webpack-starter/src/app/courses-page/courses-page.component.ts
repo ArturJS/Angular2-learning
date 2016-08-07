@@ -3,7 +3,8 @@
  */
 import { Component } from '@angular/core';
 import { SearchCourse } from './search-course';
-import { CourseItem, Course } from './course-item';
+import { CourseItem } from './course-item';
+import { Course } from '../entities/course';
 
 @Component({
   selector: 'courses-page',
@@ -22,13 +23,11 @@ export class CoursesPage {
       duration: 123,
       authors: ['123asd'],
       };
-    console.dir(abc as CourseItem);
+
     this.courseItems = [
-      /*new CourseItem(abc)*/
-     /* new CourseItem('123', 'lorem ipsum...', 123, ['123asd'])*/
-      abc as Course,
-      abc as Course,
-      abc as Course,
+      new Course(abc),
+      new Course(abc),
+      new Course(abc),
     ];
   }
 }

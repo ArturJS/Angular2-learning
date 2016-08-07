@@ -1,9 +1,14 @@
 <h1>Courses page</h1>
 <div class="row">
-   <search-course></search-course>
+  <search-course></search-course>
+  <button class="btn btn-success add-course">
+    <i class="glyphicon glyphicon-plus-sign"></i>
+    Добавить курс
+  </button>
+
 </div>
 
-<ul>
+<ul class="courses-list">
   <li *ngFor="let course of courseItems">
     <course-item [course]="course"></course-item>
   </li>
