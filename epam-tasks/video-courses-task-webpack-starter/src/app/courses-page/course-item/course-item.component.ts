@@ -3,12 +3,14 @@
  */
 import { Component } from '@angular/core';
 import { Course } from '../../entities/course';
+import { DurationPipe } from '../duration-pipe/duration.pipe';
 
 @Component({
   selector: 'course-item',
   inputs: ['course'],
   templateUrl: './course-item.html',
-  styleUrls: ['./course-item.css']
+  styleUrls: ['./course-item.css'],
+  pipes: [ DurationPipe ]
 })
 
 export class CourseItem {

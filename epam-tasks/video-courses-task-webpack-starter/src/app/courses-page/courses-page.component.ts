@@ -31,14 +31,14 @@ export class CoursesPage {
         title: 'Course 2',
         description: 'lorem ipsum...',
         date: new Date(),
-        duration: 123,
+        duration: 60,
         authors: ['123asd'],
       }),
       new Course({
         title: 'Course 3',
         description: 'lorem ipsum...',
         date: new Date(),
-        duration: 123,
+        duration: 12345,
         authors: ['123asd'],
       }),
     ];
