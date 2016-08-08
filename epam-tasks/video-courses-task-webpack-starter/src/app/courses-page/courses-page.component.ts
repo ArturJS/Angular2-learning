@@ -24,7 +24,7 @@ export class CoursesPage {
         title: 'Course 1',
         description: 'lorem ipsum...',
         date: new Date(),
-        duration: 123,
+        duration: 133,
         authors: ['123asd'],
       }),
       new Course({
@@ -32,6 +32,13 @@ export class CoursesPage {
         description: 'lorem ipsum...',
         date: new Date(),
         duration: 60,
+        authors: ['123asd'],
+      }),
+      new Course({
+        title: 'Course qwe',
+        description: 'lorem ipsum...',
+        date: new Date(),
+        duration: 0,
         authors: ['123asd'],
       }),
       new Course({

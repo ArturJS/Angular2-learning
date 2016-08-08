@@ -15,9 +15,12 @@ import {
 export class FilterPipe implements PipeTransform {
   transform(items: any[], fields : string[], value : string = ''): any[] {
     if (!items) return [];
+
+    value = value.toLowerCase();
+
     return items.filter(it => {
       for(let field of fields) {
-        if (it[field].toString().indexOf(value) !== -1) {
+        if (it[field].toString().toLowerCase().indexOf(value) !== -1) {
           return true;
         }
       }

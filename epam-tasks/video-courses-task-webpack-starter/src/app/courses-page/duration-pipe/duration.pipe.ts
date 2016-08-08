@@ -54,6 +54,16 @@ export class DurationPipe implements PipeTransform {
     }
 
 
-    return [hours, ' ', hoursStr, ' ', minutes, ' ', minutesStr ].join('');
+    if (hours > 0 && minutes > 0) {
+      return [hours, ' ', hoursStr, ' ', minutes, ' ', minutesStr ].join('');
+    }
+
+    if (hours > 0 && minutes === 0) {
+      return [hours, ' ', hoursStr].join('');
+    }
+
+    if (hours === 0 && minutes === 0) {
+      return [minutes, ' ', minutesStr].join('');
+    }
   }
 }
