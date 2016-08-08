@@ -21,6 +21,7 @@ export class CoursesPage {
   constructor(){
     this.courseItems = [
       new Course({
+        id: 1,
         title: 'Course 1',
         description: 'lorem ipsum...',
         date: new Date(),
@@ -28,6 +29,7 @@ export class CoursesPage {
         authors: ['123asd'],
       }),
       new Course({
+        id: 2,
         title: 'Course 2',
         description: 'lorem ipsum...',
         date: new Date(),
@@ -35,6 +37,7 @@ export class CoursesPage {
         authors: ['123asd'],
       }),
       new Course({
+        id: 3,
         title: 'Course qwe',
         description: 'lorem ipsum...',
         date: new Date(),
@@ -42,6 +45,7 @@ export class CoursesPage {
         authors: ['123asd'],
       }),
       new Course({
+        id: 4,
         title: 'Course 3',
         description: 'lorem ipsum...',
         date: new Date(),
