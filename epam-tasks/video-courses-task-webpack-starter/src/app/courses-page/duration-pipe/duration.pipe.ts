@@ -26,14 +26,6 @@ export class DurationPipe implements PipeTransform {
     let minutesPer100modulo : number = ~~(minutes % 100);
     let minutesPer10modulo : number = ~~(minutes % 10);
 
-    console.log('hours '+hours);
-    console.log('minutes '+minutes);
-    console.log('hoursPer100modulo '+hoursPer100modulo);
-    console.log('hoursPer10modulo '+hoursPer10modulo);
-    console.log('minutesPer100modulo '+minutesPer100modulo);
-    console.log('minutesPer10modulo '+minutesPer10modulo);
-
-
     if (hoursPer100modulo >= 11 &&
         hoursPer100modulo <= 14 ||
         hoursPer10modulo === 0 ||
