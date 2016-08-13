@@ -15,6 +15,7 @@ var metadata = {
 /*
  * config
  */
+
 module.exports = {
     // static data for index.html
     metadata: metadata,
