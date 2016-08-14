@@ -1,1 +1,66 @@
-<h1>Edit course page</h1>
+<div class="edit-course-page">
+  <div class="row">
+    <label class="control-label col-sm-3"
+           for="title">Название</label>
+    <div class="col-sm-9">
+      <input id="title"
+             type="text"
+             class="form-control"
+             placeholder="название курса"/>
+    </div>
+  </div>
+  <div class="row">
+    <label class="control-label col-sm-3"
+           for="description">Описание</label>
+    <div class="col-sm-9">
+      <textarea id="description"
+                class="form-control"
+                placeholder="описание курса"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <label class="control-label col-sm-3"
+           for="date">Дата</label>
+    <div class="col-sm-9">
+      <input id="date"
+             type="text"
+             class="form-control"
+             placeholder="название курса"/>
+    </div>
+  </div>
+  <div class="row">
+    <label class="control-label col-sm-3"
+           for="duration">Продолжительность</label>
+    <div class="col-sm-9">
+      <input id="duration"
+             type="number"
+             class="form-control"
+             placeholder="название курса"/>
+    </div>
+  </div>
+  <div class="row">
+    <label class="control-label col-sm-3">Список авторов</label>
+    <div class="col-sm-9">
+      <div class="row">
+        <div class="col-sm-5">
+          <select class="form-control"
+                  multiple></select>
+        </div>
+        <div class="col-sm-2">
+          <button class="btn btn-primary btn-block"> > </button>
+          <button class="btn btn-primary btn-block"> < </button>
+        </div>
+        <div class="col-sm-5">
+          <select class="form-control"
+                  multiple></select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-9 btn-container">
+      <button class="btn btn-success">Сохранить</button>
+      <button class="btn btn-default">Отмена</button>
+    </div>
+  </div>
+</div>
