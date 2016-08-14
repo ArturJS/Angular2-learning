@@ -7,8 +7,9 @@ import { Component } from '@angular/core';
     selector: 'login',
 
     template: `
-    <h1>Login</h1>
-    `
+    <h1 class="abc">Login</h1>
+    `,
+    styles: [ './login.scss' ]
 })
 export class Login {
     constructor() {

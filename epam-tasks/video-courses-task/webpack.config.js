@@ -56,21 +56,32 @@ module.exports = {
             {
                 test: /\.tsx?$/,
                 loader: 'ts-loader',
-                include: [ path.resolve(__dirname, "./src") ]
+                include: [path.resolve(__dirname, "./src")]
             },
             // Support for .html as raw text
             {
                 test: /\.html$/,
                 loader: 'raw-loader',
-                exclude: [ path.resolve(__dirname, "./src/index.html") ]
+                exclude: [path.resolve(__dirname, "./src/index.html")]
+            },
+            // Support for .css files
+            {
+                test: /\.css$/,
+                loaders: ['to-string-loader', 'css-loader']
+            },
+            // Support for .scss files
+            {
+                test: /\.scss$/,
+                exclude: /node_modules/,
+                loaders: ['raw-loader', 'sass-loader'] // sass-loader not scss-loader
             }
         ]
     },
 
     plugins: [
         // Copy static assets to the build folder
-        new CopyWebpackPlugin([{ from: './src/assets', to: 'assets' }]),
+        new CopyWebpackPlugin([{from: './src/assets', to: 'assets'}]),
         // Generate the index.html
-        new HtmlWebpackPlugin({ template: './src/index.html' })
+        new HtmlWebpackPlugin({template: './src/index.html'})
     ]
 };

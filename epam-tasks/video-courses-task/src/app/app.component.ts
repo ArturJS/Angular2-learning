@@ -8,13 +8,11 @@ import {ROUTER_DIRECTIVES}  from '@angular/router';
 @Component({
     selector: 'app',
     template: `
-    <nav>
-      <a [routerLink]="['/dashboard']" routerLinkActive="active">Dashboard</a>
-      <a [routerLink]="['/heroes']" routerLinkActive="active">Heroes</a>
-    </nav>
+    <h1 class="abc">App Component</h1>
     <router-outlet></router-outlet>
     `,
     directives: [ROUTER_DIRECTIVES],
+    styles: [ 'app.scss' ]
 })
 export class AppComponent {
 }
