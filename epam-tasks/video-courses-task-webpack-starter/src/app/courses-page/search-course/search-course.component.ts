@@ -11,8 +11,6 @@ import {
   REACTIVE_FORM_DIRECTIVES,
   FormBuilder,
   FormGroup,
-  Validators,
-  AbstractControl
 } from '@angular/forms';
 
 @Component({
@@ -20,7 +18,7 @@ import {
   templateUrl: './search-course.html',
   directives:[ FORM_DIRECTIVES, REACTIVE_FORM_DIRECTIVES ],
   outputs: ['updatedSearchText'],
-  styleUrls: ['./search-course.css']
+  styleUrls: ['./search-course.scss']
 })
 
 export class SearchCourse {

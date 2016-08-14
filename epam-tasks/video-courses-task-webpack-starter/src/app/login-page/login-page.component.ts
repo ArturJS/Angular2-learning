@@ -16,7 +16,7 @@ import {
   selector: 'login-page',
   directives: [FORM_DIRECTIVES, REACTIVE_FORM_DIRECTIVES],
   templateUrl: './login-page.html',
-  styleUrls: ['./login-page.css']
+  styleUrls: ['./login-page.scss']
 })
 export class LoginPage {
   private loginForm : FormGroup;

@@ -15,7 +15,7 @@ import { AppHeader } from './app-header';
   encapsulation: ViewEncapsulation.None,
   directives: [AppHeader],
   styleUrls: [
-    './app.style.css'
+    './app.style.scss'
   ],
   template: `
     <nav class="main-nav">

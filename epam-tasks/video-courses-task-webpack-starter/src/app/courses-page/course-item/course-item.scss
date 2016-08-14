@@ -1,9 +1,9 @@
 .course-item-row {
   padding: 10px 4px;
-}
 
-.course-item-row-data {
-  line-height: 32px;
+  &-data {
+    line-height: 32px;
+  }
 }
 
 h3 {

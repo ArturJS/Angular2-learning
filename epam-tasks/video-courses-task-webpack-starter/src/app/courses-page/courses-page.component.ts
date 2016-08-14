@@ -11,7 +11,7 @@ import { FilterPipe } from './filter-pipe/filter.pipe';
   selector: 'courses-page',
   directives: [ SearchCourse, CourseItem ],
   templateUrl: './courses-page.html',
-  styleUrls: ['./courses-page.css'],
+  styleUrls: ['./courses-page.scss'],
   pipes: [ FilterPipe ]
 })
 

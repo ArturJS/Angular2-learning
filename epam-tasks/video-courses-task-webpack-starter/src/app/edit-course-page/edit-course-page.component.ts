@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'edit-course-page',
   templateUrl: './edit-course-page.html',
-  styleUrls: ['./edit-course-page.css']
+  styleUrls: ['./edit-course-page.scss']
 })
 
 export class EditCoursePage {

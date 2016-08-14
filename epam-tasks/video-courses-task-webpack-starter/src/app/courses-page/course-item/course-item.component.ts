@@ -9,7 +9,7 @@ import { DurationPipe } from '../duration-pipe/duration.pipe';
   selector: 'course-item',
   inputs: ['course'],
   templateUrl: './course-item.html',
-  styleUrls: ['./course-item.css'],
+  styleUrls: ['./course-item.scss'],
   pipes: [ DurationPipe ]
 })
 
