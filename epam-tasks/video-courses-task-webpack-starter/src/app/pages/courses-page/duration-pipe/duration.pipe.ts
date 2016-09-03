@@ -13,7 +13,7 @@ import {
 })
 @Injectable()
 export class DurationPipe implements PipeTransform {
-  transform(duration : number): string {//todo fix ( ~~  <== hack for truncating of fraction part of division)
+  transform(duration : number): string {
     let hours : number = ~~(duration / 60);
     let minutes : number = ~~(duration % 60);
 

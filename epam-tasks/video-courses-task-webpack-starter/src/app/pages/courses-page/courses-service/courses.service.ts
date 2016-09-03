@@ -2,7 +2,7 @@
  * Created by Artur_Nizamutdinov on 8/15/2016.
  */
 import { Injectable } from '@angular/core';
-import { Course } from '../../entities/course';
+import { Course } from '../../../entities/course';
 @Injectable()
 export class CoursesService {
   getAll() {

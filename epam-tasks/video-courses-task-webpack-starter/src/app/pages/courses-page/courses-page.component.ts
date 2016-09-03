@@ -4,16 +4,16 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchCourse } from './search-course';
 import { CourseItem } from './course-item';
-import { Course } from '../entities/course';
+import { Course } from '../../entities/course';
 import { FilterPipe } from './filter-pipe/filter.pipe';
 import { CoursesService } from './courses-service/courses.service';
 
 @Component({
   selector: 'courses-page',
-  directives: [ SearchCourse, CourseItem ],
+  //directives: [ SearchCourse, CourseItem ],
   templateUrl: './courses-page.html',
   styleUrls: ['./courses-page.scss'],
-  pipes: [ FilterPipe ],
+  //pipes: [ FilterPipe ],
   providers: [ CoursesService ]
 })
 

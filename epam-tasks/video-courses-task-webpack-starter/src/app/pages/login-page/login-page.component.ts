@@ -3,8 +3,6 @@
  */
 import {Component} from '@angular/core';
 import {
-  FORM_DIRECTIVES,
-  REACTIVE_FORM_DIRECTIVES,
   FormBuilder,
   FormGroup,
   Validators,
@@ -14,7 +12,6 @@ import {
 
 @Component({
   selector: 'login-page',
-  directives: [FORM_DIRECTIVES, REACTIVE_FORM_DIRECTIVES],
   templateUrl: './login-page.html',
   styleUrls: ['./login-page.scss']
 })

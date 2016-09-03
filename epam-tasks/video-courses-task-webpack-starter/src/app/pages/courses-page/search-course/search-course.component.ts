@@ -7,8 +7,6 @@ import {
 } from '@angular/core';
 
 import {
-  FORM_DIRECTIVES,
-  REACTIVE_FORM_DIRECTIVES,
   FormBuilder,
   FormGroup,
 } from '@angular/forms';
@@ -16,7 +14,6 @@ import {
 @Component({
   selector: 'search-course',
   templateUrl: './search-course.html',
-  directives:[ FORM_DIRECTIVES, REACTIVE_FORM_DIRECTIVES ],
   outputs: ['updatedSearchText'],
   styleUrls: ['./search-course.scss']
 })

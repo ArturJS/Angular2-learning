@@ -4,7 +4,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 import { AppState } from './app.service';
-import { AppHeader } from './app-header';
 
 /*
  * App Component
@@ -13,7 +12,6 @@ import { AppHeader } from './app-header';
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
-  directives: [AppHeader],
   styleUrls: [
     './app.style.scss'
   ],
