@@ -3,8 +3,9 @@
  */
 
 const webpack = require('webpack');
+const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const helpers = require('./helpers');
-
+const autoprefixer = require('autoprefixer');
 /*
  * Webpack Plugins
  */
@@ -161,6 +162,8 @@ module.exports = {
         loaders: ['raw-loader', 'sass-loader'] // sass-loader not scss-loader
       },
 
+      { test: /\.(woff2?|ttf|eot|svg)$/, loader: 'url?limit=10000' },
+
       /* Raw loader support for *.html
        * Returns file content as string
        *
@@ -181,6 +184,8 @@ module.exports = {
     ]
 
   },
+
+  postcss: [autoprefixer],  // <--- postcss
 
   /*
    * Add additional plugins to the compiler.
@@ -260,6 +265,12 @@ module.exports = {
       headTags: require('./head-config.common')
     }),
 
+    // jQuery
+    new ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery',
+      jquery: 'jquery'
+    })
   ],
 
   /*

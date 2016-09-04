@@ -5,7 +5,7 @@
 const helpers = require('./helpers');
 const webpackMerge = require('webpack-merge'); // used to merge webpack configs
 const commonConfig = require('./webpack.common.js'); // the settings that are common to prod and dev
-
+const autoprefixer = require('autoprefixer');
 /**
  * Webpack Plugins
  */
@@ -87,6 +87,7 @@ module.exports = webpackMerge(commonConfig, {
 
   },
 
+  postcss: [autoprefixer], // <--- postcss
   /**
    * Add additional plugins to the compiler.
    *
@@ -196,6 +197,11 @@ module.exports = webpackMerge(commonConfig, {
     //   threshold: 2 * 1024
     // })
 
+    new ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery',
+      jquery: 'jquery'
+    })
   ],
 
   /**

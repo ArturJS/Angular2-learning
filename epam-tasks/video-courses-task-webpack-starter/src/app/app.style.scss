@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "some-font";
+  src: url("../../node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("../../node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot#iefix") format("embedded-opentype"),
+  url("../../node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"),
+  url("../../node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"),
+  url("../../node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#rio") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
 html, body {
   height: 100%;
   font-family: Arial, Helvetica, sans-serif
