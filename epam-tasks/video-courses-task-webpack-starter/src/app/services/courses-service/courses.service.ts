@@ -1,12 +1,16 @@
 /**
  * Created by Artur_Nizamutdinov on 8/15/2016.
  */
-import { Injectable } from '@angular/core';
-import { Course } from '../../../entities/course';
+import {Injectable} from '@angular/core';
+import {Course} from '../../entities/course';
+import {Observable}     from 'rxjs/Observable';
+
 @Injectable()
 export class CoursesService {
-  getAll() {
-    return Promise.resolve([//todo fix mock data to http implementation
+  private courses:Course[];
+
+  constructor() {
+    this.courses = [
       new Course({
         id: 1,
         title: 'Course 1',
@@ -47,6 +51,19 @@ export class CoursesService {
         duration: 130,
         authors: ['123asd'],
       }),
-    ]);
+    ]
+  }
+
+
+  getAll() {
+    return Observable.create(observer => {
+      observer.next(this.courses);
+    });
+  }
+
+  get(id:number) {
+    return Observable.create(observer => {
+      observer.next(this.courses.find(item => item.id === id));
+    });
   }
 }

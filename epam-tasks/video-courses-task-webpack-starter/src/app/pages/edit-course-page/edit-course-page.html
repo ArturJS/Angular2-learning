@@ -6,7 +6,8 @@
       <input id="title"
              type="text"
              class="form-control"
-             placeholder="название курса"/>
+             placeholder="название курса"
+             [(ngModel)]="course.title"/>
     </div>
   </div>
   <div class="row">
@@ -15,7 +16,8 @@
     <div class="col-sm-9">
       <textarea id="description"
                 class="form-control"
-                placeholder="описание курса"></textarea>
+                placeholder="описание курса"
+                [(ngModel)]="course.description"></textarea>
     </div>
   </div>
   <div class="row">
@@ -35,7 +37,8 @@
       <input id="duration"
              type="number"
              class="form-control"
-             placeholder="название курса"/>
+             placeholder="название курса"
+             [(ngModel)]="course.duration"/>
     </div>
   </div>
   <div class="row">

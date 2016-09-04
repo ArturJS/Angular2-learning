@@ -2,7 +2,7 @@
  * Created by Артур on 07.08.2016.
  */
 export class Course {
-  public id : string;
+  public id : number;
   public title : string;
   public description : string;
   public date : Date;

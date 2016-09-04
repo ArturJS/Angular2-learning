@@ -1,33 +1,38 @@
 /**
  * Created by Артур on 31.07.2016.
  */
-import { Component, OnInit } from '@angular/core';
-import { SearchCourse } from './search-course';
-import { CourseItem } from './course-item';
+import { Component,
+         OnInit,
+         OnDestroy
+} from '@angular/core';
+
 import { Course } from '../../entities/course';
-import { FilterPipe } from './filter-pipe/filter.pipe';
-import { CoursesService } from './courses-service/courses.service';
+import { CoursesService } from '../../services/courses-service/courses.service';
+import {Subscription} from "rxjs/Subscription";
 
 @Component({
   selector: 'courses-page',
-  //directives: [ SearchCourse, CourseItem ],
   templateUrl: './courses-page.html',
   styleUrls: ['./courses-page.scss'],
-  //pipes: [ FilterPipe ],
   providers: [ CoursesService ]
 })
 
-export class CoursesPage implements OnInit {
+export class CoursesPage implements OnInit, OnDestroy {
   courseItems : Course[];
   searchText : string;
+  subGetAllService : Subscription;
   constructor(private coursesService: CoursesService){
 
   }
 
   ngOnInit(){
-    this.coursesService
+    this.subGetAllService = this.coursesService
         .getAll()
-        .then(courses => this.courseItems = courses);
+        .subscribe(courses => this.courseItems = courses);
+  }
+
+  ngOnDestroy(){
+     this.subGetAllService.unsubscribe();
   }
 
   filterCourseItems(searchText : string) : void {
